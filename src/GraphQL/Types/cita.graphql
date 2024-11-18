@@ -1,0 +1,34 @@
+type Query {
+  getListPiso(fechaHora: String!): [listPisos]
+  getListVisitantes(fechaHora: String!): [listVisitantes]
+}
+
+type Mutation {
+  getImagenesVisitante(id: Int!): imagenesVisitante
+}
+
+type imagenesVisitante {
+  foto1: String
+  foto2: String
+}
+
+type listVisitantes {
+  id: Int
+  cedula: String
+  nombres: String
+  apellidos: String
+  piso: String
+  departamento: String
+  quien: String
+  telefono: String
+  carnet: String
+  motivo: String
+  fecha_registro: String
+  fecha_salida: String
+}
+
+type listPisos {
+  piso: String!
+  departamento: String!
+  count: Int!
+}
